@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "swagger": "node ./swagger.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +16,8 @@
     "mongodb": "^6.16.0",
     "swagger-autogen": "^2.23.7",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

@@ -71,3 +71,80 @@ Content-Type: application/json
 DELETE HTTP://localhost:3000/recipes/683286449e781046aabc3fae HTTP/1.1
 
 #### render routes #############################
+
+###get all recipes
+GET https://cse341project-34u3.onrender.com/recipes 
+
+###get recipe by id
+GET https://cse341project-34u3.onrender.com/recipes/
+
+###create a new recipe
+POST https://cse341project-34u3.onrender.com/recipes HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": "r9",
+    "name": "Butternut Squash Soup",
+    "ingredients": [
+    "1 medium butternut squash (peeled and cubed)",
+    "1 tbsp olive oil",
+    "1 small onion (chopped)",
+    "2 cloves garlic (minced)",
+    "3 cups vegetable broth",
+    "1/2 cup coconut milk",
+    "1/2 tsp ground nutmeg",
+    "Salt",
+    "Pepper"
+    ],
+    "steps": [
+    "Heat olive oil in a large pot over medium heat.",
+    "Add chopped onion and garlic; sauté for 3-4 minutes until softened.",
+    "Add cubed butternut squash and stir to combine.",
+    "Pour in vegetable broth, bring to a boil, then reduce heat and simmer for 20-25 minutes until squash is tender.",
+    "Use an immersion blender to puree the soup until smooth (or transfer in batches to a blender).",
+    "Stir in coconut milk, nutmeg, salt, and pepper.",
+    "Simmer for 5 more minutes. Serve warm."
+    ],
+    "prepTime": 10,
+    "cookTime": 30,
+    "difficulty": "Easy",
+    "tags": ["soup", "vegetarian", "fall", "comfort food"],
+    "imageURL": "https://example.com/images/butternut-soup.jpg"
+}
+
+###update a recipe
+POST https://cse341project-34u3.onrender.com/recipes/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": "r9",
+    "name": "Butternut Squash Soup",
+    "ingredients": [
+    "1 medium butternut squash (peeled and cubed)",
+    "1 tbsp olive oil",
+    "1 small onion (chopped)",
+    "2 cloves garlic (minced)",
+    "3 cups vegetable broth",
+    "1/2 cup coconut milk",
+    "1/2 tsp ground nutmeg",
+    "Salt",
+    "Pepper"
+    ],
+    "steps": [
+    "Heat olive oil in a large pot over medium heat.",
+    "Add chopped onion and garlic; sauté for 3-4 minutes until softened.",
+    "Add cubed butternut squash and stir to combine.",
+    "Pour in vegetable broth, bring to a boil, then reduce heat and simmer for 20-25 minutes until squash is tender.",
+    "Use an immersion blender to puree the soup until smooth (or transfer in batches to a blender).",
+    "Stir in coconut milk, nutmeg, salt, and pepper.",
+    "Simmer for 5 more minutes. Serve warm."
+    ],
+    "prepTime": 10,
+    "cookTime": 40,
+    "difficulty": "Medium",
+    "tags": ["soup", "vegetarian", "fall", "comfort food"],
+    "imageURL": "https://example.com/images/butternut-soup.jpg"
+}
+
+###delete a recipe
+DELETE https://cse341project-34u3.onrender.com/recipes/ HTTP/1.1

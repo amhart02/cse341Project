@@ -64,7 +64,7 @@ const createRecipe = async (req, res) => {
 }
 
 const updateRecipe = async (req, res) => {
-    const recipeId = new ObjectId(req.params.id);
+    const recipeId = req.params.id;
     if (!isValidObject(recipeId)) {
         return res.status(400).json({message: 'Invalid recipe ID'});
     }
@@ -79,6 +79,7 @@ const updateRecipe = async (req, res) => {
         imageURL: req.body.imageURL
     }
     try {
+        const recipeId = new ObjectId(id)
         const result = await mongodb.getDB('CSE341Project').collection('Recipes').replaceOne({_id : recipeId}, recipe)
         if (result.modifiedCount > 0) {
             res.status(204).send();

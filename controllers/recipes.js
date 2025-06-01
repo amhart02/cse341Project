@@ -64,7 +64,7 @@ const createRecipe = async (req, res) => {
 }
 
 const updateRecipe = async (req, res) => {
-    const recipeId = req.params.id;
+    const id = req.params.id;
     if (!isValidObject(recipeId)) {
         return res.status(400).json({message: 'Invalid recipe ID'});
     }

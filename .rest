@@ -150,3 +150,61 @@ Content-Type: application/json
 ###delete a recipe
 DELETE https://cse341project-34u3.onrender.com/recipes/ HTTP/1.1
 
+
+###user routes #############################################################################################################################
+
+###get all users
+GET http://localhost:3000/users
+
+###get user by ID
+GET http://localhost:3000/users/6843cda19ae0e125f410631c HTTP/1.1
+
+###create user
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Malena Colvin",
+    "email": "malena@example.com"
+}
+###update user
+PUT http://localhost:3000/users/6843cd589ae0e125f410631b HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Malena Hart",
+    "email": "malena@example.com"
+}
+###delete user
+DELETE HTTP://localhost:3000/users/6843cd589ae0e125f410631b HTTP/1.1
+
+#### render routes #############################
+
+###get all users
+GET https://cse341project-34u3.onrender.com/users
+
+###get user by id
+GET https://cse341project-34u3.onrender.com/users/
+
+###create a new user
+POST https://cse341project-34u3.onrender.com/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Malena Colvin",
+    "email": "malena@example.com"
+}
+
+###update a user
+PUT https://cse341project-34u3.onrender.com/users/683286769e781046aabc3faf HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Malena Hart",
+    "email": "malena@example.com"
+}
+
+
+###delete a user
+DELETE https://cse341project-34u3.onrender.com/users/ HTTP/1.1
+

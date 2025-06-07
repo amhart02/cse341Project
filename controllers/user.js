@@ -27,7 +27,7 @@ const getSingle = async (req, res) => {
             return res.status(404).json({ message: 'User not found'});
         }
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(recipe);
+        res.status(200).json(user);
     } catch (err) {
         res.status(500).json({ message: 'Error fetching user', error: err.message})
     }
@@ -96,4 +96,4 @@ const deleteUser = async (req, res) => {
     }
 }
 
-module.exports = [getAll, getSingle, createUser, updateUser, deleteUser ]
+module.exports = {getAll, getSingle, createUser, updateUser, deleteUser};
